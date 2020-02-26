@@ -1,0 +1,84 @@
+*Notes sur la réunion
+
+
+Points du doc Excel sur lesquels on a des désaccords (actuellement) : 
+
+* Les autres utilisateurs peuvent-ils jugés si la tâche a été correctement accomplie? Système de points ou d'approbation?
+* L'appli peut-elle punir les utilisateurs? C'est-à-dire en cas d'accumulation de trop de retard ou des tâches considérées comme mal faites par les autres utilisateurs, l'appli peut-elle rajouter plus de tâches à un utilisateur? Ou des tâches fun comme se faire pardonner des autres en apportant du chocolat ou autre! ;-)
+* Local ou pas
+
+Accorder du poids à l'avis de Sinouhé qui veut vraiment faire l’application -> Ok, mais pour le projet, c'est quand même la classe qui jouent le rôle des utilisateurs, eux risquent de trouver qu'on en fait pas assez.
+
+Question : est-ce qu'on reproduit tous les use case de l'admin et des utilisateurs sur le même schéma -> on fait un essai sur Visual Paradigm
+
+--------
+
+
+Question du local - C'est l'idée de base de Sinouhé -> mais il dit qu'on n'est pas forcément obligé de s'y tenir pour faire l'exercice.
+Punir les utilisateurs -> pour nous fait problème
+Des rappels, c'est une bonne idée.
+
+Sinouhé -> aimerait que l'app reste la plus simple possible, donc pas rajouter des options qui ont peu d'intérêt. Le rappel, reste simple pour l'utilisateur et a une valeur ajoutée.
+Punition des tâches -> difficulté d'implémenter, peut créer des tensions -> si la personne s'en fout, de toute façon elle se fichera aussi des récompenses / punitions. Et, cela pourrait se faire plutôt dans la vie réelle.
+
+Idée de Sinouhé : tâches qu'on aime, qu'on aime pas, deux modes -> un algorithme qui le ferait, ou un mode manuel ou l'admin peut ajouter des tâches. 
+
+Une appli de Sinouhé -> pour mettre les choses qu'on a envie de faire, fonctionne avec la bonne volonté des gens : chacun rajoute les choses comme il ou elle veut. 
+
+Des utilisateurs qui ont un peu plus de droits (Papa Maman, par exemple), et d'autres qui ont moins de droits -> donc pourquoi pas un système de privilèges.
+
+Est-ce qu'on dirait que certains utilisateurs avec plus de privilèges doivent valider certaines demandes de suppression, ajout, choix de tâches des autres utilisateurs.
+
+Échanges de tâches -> petit frère et petite soeur veulent échanger des tâches -> ils doivent demander aux parents pour le faire ?
+
+Échanges : bonne idée mais plus difficile à implémenter. Et est-ce que ça a une valeur ajoutée ? Il faut éviter de faire un truc trop gadget avec plein de fonctions qu'on ne va jamais utiliser. Mais ici oui valeur ajoutée. SInouhé l'imagine comme on clique sur la tâche et on a ajouter tâche, supprimer tâche, assigner tâche à un autre utilisateur ou échanger.
+
+Sur le détail user : attribuer à un autre utilisateur, échanger, non attribué.
+
+-> on peut créer une tâche qui n'est pas assignée, qui est dans un pool de tâche -> écran liste de tâche -> avec des petits rectangles pour les tâches, les noms des personnes auxquelles c'est assigné, et une petite boite sur laquelle il est écrit en grisé -> écrit "non-attribué"
+
+-> on doit aussi penser à assigner une tâche à des utilisateurs différents. -> la couleur peut changer -> se mélanger si plusieurs utilisateurs sont sur la même tâche (chaque utilisateur ayant sa couleur)
+
+Calendrier -> selon les jours, la tâche serait pour quelqu'un d'autre.
+
+Un système simple et un système compliqué -> le système simple permet plusieurs personnes par tâches -> mais on a une récurrence, sans qu'elle soit attribué à une personne ou l'autre -> les deux personnes s'arrange pour faire la tâche à tour de rôle.
+Éventuellement la personne peut signaler si elle a fait la tâche mais pas forcément, on part du principe que les deux personnes s'arrange.
+
+Système compliqué : on donne un jour pour chaque personne. 
+
+Le système compliqué, implique de nouvelles fonctionnalités, donc quelque chose de plus complexe -> mais est-ce qu'il y a de la valeur ajoutée, c'est toujours la même question... 
+
+Pour chaque fonctionnalité, se demander si c'est l'application qui doit le gérer où si c'est aux personnes de gérer.
+
+L'application ne peut pas régler les problèmes humains, elle peut aider à faire les choses, mais elle ne résoudra pas les problèmes si une personne du ménage ne veut rien faire. Les utilisateurs sont donc supposés être conciliants pour utiliser l'application. L'application facilite la gestion. 
+
+Pour des utilisateurs comme un enfant de 10 ans, ne faut-il pas qu'il ait un poids total moins élevé qu'un autre ? Un enfant en fera moins que les parents. Le poids total peut-être différent d'un utilisateur à l'autre.  -> peut être dans la description de créer une utilisateur ou modifier un utilisateur.
+
+Il faut bien spécifier le contexte dans lequel va être utilisé l'application : soit contexte vraiment familial, soit contexte de colocation. Pour toutes les fonctionnalités à implémenter, il faut se poser cette question, est-ce que cela s'inscrit dans l'un de ces contextes ? Si ça n'est pas le cas, pas forcément bon d'implémenter ça.
+A priori on ne voit pas d'autres contexte où ce serait utilisé. Mais on ne sait jamais, certaines applications naissent d'un autre besoin initial.
+Si les autres de la classe voient une situation à laquelle on n'a pas pensé, on peut toujours l'implémenter.
+
+Idée de base, un écran dans le salon, sur un Raspberry PI -> la liste tâches, avec les noms (éventuellement les avatars ou des photos représentant les utilisateurs) -> les autres écrans sont des écrans de gestion.
+
+Idée : est-ce qu'on envoie les données vers un calendrier, par exemple Google ? -> à voir avec les API des calendriers - mais c'est du technique. Dans le principe, c'est une bonne idée. Ça a une valeur ajoutée.
+Pas obligé de l'implémenter au final -> on peut montrer un produit prototype mais dont toutes les fonctionnalités ne sont pas encore implémentées par manque de temps, on peut juste dire que c'est un prototype.
+
+Question de la réalisation -> Sinouhé propose de commencer à coder réellement le projet. Question de la technologie utilisée -> angular -> mais pas forcément compréhensible pour toute la classe.
+Est-ce que quelqu'un d'autre veut s'impliquer ? Sev et Célo, pas le temps de s'occuper du code donc ça convient.
+
+Récurrence et jour des tâches -> à éditer dans la tâche mais aussi dans le calendrier.
+Est-ce que c'est deux use case différent ? En soit c'est une même action mais qui se ferait à deux endroits différents -> comme souvent dans les applications, on peut faire les choses de deux façons différentes, c'est redondant. Mais faut-il en fait deux use case ? On laisse cette question en suspend pour le cours.
+
+
+---
+
+En conclusion : on se dit qu'on est ok avec le nombre de use case pour le moment. 
+
+On fait chacun de notre côté 1 use case et 1 diagramme de séquence. 
+
+-> se dire de quels use case on s'occupe pour pas se marcher sur les pieds ;-) On communique sur le SLACK ! :D
+
+
+
+
+
